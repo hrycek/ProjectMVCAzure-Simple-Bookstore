@@ -7,3 +7,5 @@ Book and user data is stored in an <b>Azure SQL Database</b>, which allowed for 
 With integration with <b>Azure cloud services</b>, the application is scalable and easy to deploy in a cloud environment.
 
 # 1. Running
+
+todo
