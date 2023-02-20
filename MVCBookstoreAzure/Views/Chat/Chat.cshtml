@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="font-weight: 400; color:white;">Skontaktuj się z nami!</h1>
+   
+
+     <hr style="color:white; width: 100vh"/>
+
+    <form method="post" asp-controller="Chat" asp-action="CreateMessage">
+        <div class="form-group">
+                <textarea id="chat-area" style="width: 120vh; height: 30vh; font-size: 2vh; padding: 10px;" placeholder="Tu zadaj swoje pytanie..." name="message"></textarea>
+             <br />
+
+            <input type="text" id="msg-area" style="width: 80vh;" placeholder="Podaj swój email..." name="email"/>
+          <input id="sendButton" type="submit" value="Potwierdź" class="btn btn-success" style="margin: 10px;" />
+        </div>
+    </form>
+  
+</div>
+
+<script src="~/js/site.js"></script>

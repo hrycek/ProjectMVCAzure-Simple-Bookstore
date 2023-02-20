@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="font-weight: 400; color:white;">Logowanie</h1>
+    <br /><hr />
+    <form method="post" asp-controller="Home" asp-action="SetUserCookie">
+       <center>
+            <div class="form-group" style="border-radius: 5px; border: 1px solid white; width: 40%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <br />
+                <input class="form-control" type="text" id="username" style="width: 30vh;" placeholder="Podaj nazwe uzytkownika..." name="username" />
+                <br />
+                <input class="form-control" type="password" style="width: 30vh;" placeholder="Podaj hasło..." />
+                <br />
+            <input id="sendButton" type="submit" value="Potwierdź" class="btn btn-success" style="margin: 10px;" />
+            </div>
+        </center> 
+    </form>
+    
+</div>

@@ -1,0 +1,163 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="color: white;">Szczegóły książki</h1>
+<hr style="color: white; height: 2px;" />
+<br />
+
+<div style="color: black; background-color: white; padding: 20px; opacity: 0.95; border-radius: 15px; width: 80%; margin-left: auto; margin-right: auto;">
+
+    @{
+        string text = "https://projectpchmag.blob.core.windows.net/projectpchcontainer/book_image_" + Model.Id + ".jpg";
+    }
+    
+    <div style="display: block; width: 90%; height: 30vh;border: 2px solid black;  margin-left: auto; margin-right: auto; border-bottom-left-radius: 15px; border-top-right-radius: 15px; opacity: 1; padding: 15px;">
+
+        <div style="width: 30%; float:left; height: 100%">
+
+            <img onerror="this.src='https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'" style="margin-left: 10%; height: 100%; width: 20vh; border: 2px solid black; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="@text" />
+
+        </div>
+        <div style="width: 35%; float:left; height: 100%; font-size: 25px;">
+            <table>
+                <tr>
+                    <td><h1>Tytuł</h1></td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => Model.Title)</td>
+                </tr>
+
+                <tr>
+                    <td><h1>Autor</h1></td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => Model.ReleaseDate)</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div style="width: 30%; float:left; height: 100%; font-size: 22px;">
+            <table>
+                <tr>
+                    <td><h2>Gatunek</h2></td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => Model.Genre)</td>
+                </tr>
+
+                <tr>
+                    <td><h2>Cena</h2></td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => Model.Price)</td>
+                </tr>
+
+                <tr>
+                    <td><h2>Ocena</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        @{
+                            List<string> links = new List<string>
+                        {
+                        "https://upload.wikimedia.org/wikipedia/commons/8/82/Star_rating_0.5_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/d/dd/Star_rating_1_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/a/a7/Star_rating_1.5_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/9/95/Star_rating_2_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/b/bf/Star_rating_2.5_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/2/2f/Star_rating_3_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/e/eb/Star_rating_3.5_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Star_rating_4_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/b/b9/Star_rating_4.5_of_5.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/1/17/Star_rating_5_of_5.png"
+                        };
+
+                            switch (Model.Rating)
+                            {
+                                case "0.5":
+                                    <img style="height: 20%; width: 40%;" src="@links[0]" />
+                                    break;
+                                case "1":
+                                    <img style="height: 20%; width: 40%;" src="@links[1]" />
+                                    break;
+                                case "1.5":
+                                    <img style="height: 20%; width: 40%;" src="@links[2]" />
+                                    break;
+                                case "2":
+                                    <img style="height: 20%; width: 40%;" src="@links[3]" />
+                                    break;
+                                case "2.5":
+                                    <img style="height: 20%; width: 40%;" src="@links[4]" />
+                                    break;
+                                case "3":
+                                    <img style="height: 20%; width: 40%;" src="@links[5]" />
+                                    break;
+                                case "3.5":
+                                    <img style="height: 20%; width: 40%;" src="@links[6]" />
+                                    break;
+                                case "4":
+                                    <img style="height: 20%; width: 40%;" src="@links[7]" />
+                                    break;
+                                case "4.5":
+                                    <img style="height: 20%; width: 40%;" src="@links[8]" />
+                                    break;
+                                case "5":
+                                    <img style="height: 20%; width: 40%;" src="@links[9]" />
+                                    break;
+
+                            }
+                            Console.WriteLine(links[0]);
+                        }
+
+
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div style="width: 5%; float:right; height: 100%; font-size: 25px;">
+            @{
+                if (@ViewBag.CurrUser != null)
+                {
+                    if (@ViewBag.CurrUser == "admin")
+                    {
+                        <table>
+                            <tr>
+                                <td>
+                                    <a style="text-decoration: none;" asp-action="Edit" asp-route-id="@Model.Id">✏️</a>
+                                </td>
+                            </tr>
+
+                        </table>
+                    }
+                    else if (@ViewBag.CurrUser == "user")
+                    {
+
+                      
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+
+                }
+            }
+
+
+        </div>
+    </div>
+    <div style="color: white; font-size: 4vh; margin-left: 4%; margin-top: 10px;">
+        <a style="color: black; text-decoration: none" asp-action="Index">⬅️ Wróć</a>
+    </div>
+</div>
+
