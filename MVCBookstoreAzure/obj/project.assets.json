@@ -11827,11 +11827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hryce\\OneDrive\\Pulpit\\Projekty\\ProjectMVCAzure\\MVCBookstoreAzure\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
+      "projectUniqueName": "D:\\MVCBookstoreAzure\\ProjectMVCAzure-Simple-Bookstore\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
       "projectName": "MVCBookstoreAzure",
-      "projectPath": "C:\\Users\\hryce\\OneDrive\\Pulpit\\Projekty\\ProjectMVCAzure\\MVCBookstoreAzure\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
+      "projectPath": "D:\\MVCBookstoreAzure\\ProjectMVCAzure-Simple-Bookstore\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
       "packagesPath": "C:\\Users\\hryce\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hryce\\OneDrive\\Pulpit\\Projekty\\ProjectMVCAzure\\MVCBookstoreAzure\\MVCBookstoreAzure\\obj\\",
+      "outputPath": "D:\\MVCBookstoreAzure\\ProjectMVCAzure-Simple-Bookstore\\MVCBookstoreAzure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hryce\\AppData\\Roaming\\NuGet\\NuGet.Config",

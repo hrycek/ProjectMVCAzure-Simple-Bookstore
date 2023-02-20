@@ -33,7 +33,7 @@ namespace MyMvcApp.Controllers
                 TransportType = ServiceBusTransportType.AmqpWebSockets
             };
 
-            client = new ServiceBusClient("Endpoint=sb://projectpchsb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=B6e5E8+yoj/GU7QcNUQWFqB/jYAHFDeH1d9P0yHWqi4=", clientOptions);
+            client = new ServiceBusClient("<YOUR_CONN>", clientOptions);
             sender = client.CreateSender("projectpch_bus");
 
             using ServiceBusMessageBatch messageBatch = await sender.CreateMessageBatchAsync();

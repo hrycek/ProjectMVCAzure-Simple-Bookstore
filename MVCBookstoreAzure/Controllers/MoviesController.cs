@@ -197,7 +197,7 @@ namespace MvcProject2.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadFile(IFormFile file, string id)
         {
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=projectpchmag;AccountKey=g8dtvApl6Zn1p3Cidl+KM1Yz0ngUdGnSwEWw/MQKcVSf1j1I+xmHImsi2S6gItN3Ao4YYuZp7E3H+AStJ/t9DQ==;EndpointSuffix=core.windows.net";
+            string connectionString = "<YOUR_CONN_STRING";
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
             if (file.Length > 0)

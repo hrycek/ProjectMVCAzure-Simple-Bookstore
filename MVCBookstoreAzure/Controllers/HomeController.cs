@@ -77,7 +77,7 @@ namespace MvcProject2.Controllers
             {
                 TransportType = ServiceBusTransportType.AmqpWebSockets
             };
-            client = new ServiceBusClient("Endpoint=sb://projectpchsb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=B6e5E8+yoj/GU7QcNUQWFqB/jYAHFDeH1d9P0yHWqi4=", clientOptions);
+            client = new ServiceBusClient("<YOUR_CONN_STRING>", clientOptions);
             processor = client.CreateProcessor("projectpch_bus", new ServiceBusProcessorOptions());
 
             try

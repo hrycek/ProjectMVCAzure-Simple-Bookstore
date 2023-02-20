@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ckZqmT5z2qeTc20MyecTwgGDhGrQTd7cN3PLvQGEr379bj68v+/Vr2dFn+rjbPgRBS6aW1qTauSSUExE2/S3DQ==",
+  "dgSpecHash": "jTyrOND8UZPwlmIgs9UDG3Yni9UfVUe9FZj/TFneBNJ+sVIo5VuWA1HJRSF4hivCYpuPhWBm2iFT3rpviGYGmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hryce\\OneDrive\\Pulpit\\Projekty\\ProjectMVCAzure\\MVCBookstoreAzure\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
+  "projectFilePath": "D:\\MVCBookstoreAzure\\ProjectMVCAzure-Simple-Bookstore\\MVCBookstoreAzure\\MVCBookstoreAzure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hryce\\.nuget\\packages\\azure.core\\1.27.0\\azure.core.1.27.0.nupkg.sha512",
     "C:\\Users\\hryce\\.nuget\\packages\\azure.core.amqp\\1.2.0\\azure.core.amqp.1.2.0.nupkg.sha512",
